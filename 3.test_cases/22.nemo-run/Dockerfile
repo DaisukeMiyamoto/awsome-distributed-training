@@ -14,11 +14,6 @@ RUN apt-get remove -y --allow-change-held-packages \
     libnccl2 \
     libnccl-dev
 
-RUN rm -rf /opt/hpcx \
-    && rm -rf /usr/local/mpi \
-    && rm -f /etc/ld.so.conf.d/hpcx.conf \
-    && ldconfig
-
 ENV OPAL_PREFIX=
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --allow-unauthenticated \
